@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="own-common" />
+        <module name="own-generator" />
+        <module name="own-logging" />
+        <module name="own-system" />
+        <module name="own-tools" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="own-common" options="-parameters" />
+      <module name="own-generator" options="-parameters" />
+      <module name="own-logging" options="-parameters" />
+      <module name="own-master" options="-parameters" />
+      <module name="own-system" options="-parameters" />
+      <module name="own-tools" options="-parameters" />
+    </option>
+  </component>
+</project>
