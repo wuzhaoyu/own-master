@@ -18,6 +18,12 @@ public class RsaUtils {
 
     private static final String SRC = "123456";
 
+    /**
+     * 密钥长度，DH算法的默认密钥长度是1024
+     * 密钥长度必须是64的倍数，在512到65536位之间
+     */
+    private static final int KEY_SIZE = 1024;
+
     public static void main(String[] args) throws Exception {
         System.out.println("\n");
         RsaKeyPair keyPair = generateKeyPair();
@@ -50,6 +56,7 @@ public class RsaUtils {
 
     /**
      * 私钥加密公钥解密
+     *
      * @throws Exception /
      */
     private static void test2(RsaKeyPair keyPair) throws Exception {
@@ -71,7 +78,7 @@ public class RsaUtils {
      * 公钥解密
      *
      * @param publicKeyText 公钥
-     * @param text 待解密的信息
+     * @param text          待解密的信息
      * @return /
      * @throws Exception /
      */
@@ -89,7 +96,7 @@ public class RsaUtils {
      * 私钥加密
      *
      * @param privateKeyText 私钥
-     * @param text 待加密的信息
+     * @param text           待加密的信息
      * @return /
      * @throws Exception /
      */
@@ -106,15 +113,18 @@ public class RsaUtils {
     /**
      * 私钥解密
      *
-     * @param privateKeyText 私钥
-     * @param text 待解密的文本
+     * @param privateKeyText 密钥
+     * @param text           待解密的文本
      * @return /
      * @throws Exception /
      */
     public static String decryptByPrivateKey(String privateKeyText, String text) throws Exception {
+        //使用base64解码字符串，转换为字节数组
+        //取得私钥
         PKCS8EncodedKeySpec pkcs8EncodedKeySpec5 = new PKCS8EncodedKeySpec(Base64.decodeBase64(privateKeyText));
         KeyFactory keyFactory = KeyFactory.getInstance("RSA");
         PrivateKey privateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec5);
+        // 数据解密
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.DECRYPT_MODE, privateKey);
         byte[] result = cipher.doFinal(Base64.decodeBase64(text));
@@ -125,7 +135,7 @@ public class RsaUtils {
      * 公钥加密
      *
      * @param publicKeyText 公钥
-     * @param text 待加密的文本
+     * @param text          待加密的文本
      * @return /
      */
     public static String encryptByPublicKey(String publicKeyText, String text) throws Exception {
@@ -145,8 +155,11 @@ public class RsaUtils {
      * @throws NoSuchAlgorithmException /
      */
     public static RsaKeyPair generateKeyPair() throws NoSuchAlgorithmException {
+        // 实例化秘钥生成器
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
-        keyPairGenerator.initialize(1024);
+        // 初始化密钥生成器
+        keyPairGenerator.initialize(KEY_SIZE);
+        // 生成密钥对
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
         RSAPublicKey rsaPublicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey rsaPrivateKey = (RSAPrivateKey) keyPair.getPrivate();

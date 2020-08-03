@@ -44,7 +44,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
- * @author /
+ *  在spring初始化bean的时候，如果bean实现了InitializingBean接口，会自动调用afterPropertiesSet方法
  */
 @Slf4j
 @Component

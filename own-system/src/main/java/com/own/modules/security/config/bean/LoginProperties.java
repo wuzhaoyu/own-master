@@ -60,7 +60,7 @@ public class LoginProperties {
         if (Objects.isNull(loginCode)) {
             loginCode = new LoginCode();
             if (Objects.isNull(loginCode.getCodeType())) {
-                loginCode.setCodeType(LoginCodeEnum.arithmetic);
+                loginCode.setCodeType(LoginCodeEnum.chinese_gif);
             }
         }
         return switchCaptcha(loginCode);
