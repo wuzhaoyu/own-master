@@ -13,38 +13,33 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.own.modules.system.service.dto;
+package com.own.domain.vo;
 
-import com.own.annotation.Query;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import java.io.Serializable;
-import java.sql.Timestamp;
-import java.util.HashSet;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @Author wzy
- * @Description
- * @Date:   2020/8/16 22:18
+ * @Description 发送邮件时，接收参数的类
+ * @Date:   2020/8/17 22:20
  **/
 @Data
-public class UserQueryCriteria implements Serializable {
+@AllArgsConstructor
+@NoArgsConstructor
+public class EmailVo {
 
-    @Query
-    private Long id;
+    /** 收件人，支持多个收件人 */
+    @NotEmpty
+    private List<String> tos;
 
-    @Query(propName = "id", type = Query.Type.IN, joinName = "dept")
-    private Set<Long> deptIds = new HashSet<>();
+    @NotBlank
+    private String subject;
 
-    @Query(blurry = "email,username,nickName")
-    private String blurry;
-
-    @Query
-    private Boolean enabled;
-
-    private Long deptId;
-
-    @Query(type = Query.Type.BETWEEN)
-    private List<Timestamp> createTime;
+    @NotBlank
+    private String content;
 }

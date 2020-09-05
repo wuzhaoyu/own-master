@@ -15,10 +15,40 @@
  */
 package com.own.modules.system.rest;
 
+import cn.hutool.core.collection.CollectionUtil;
+import com.own.annotation.Log;
+import com.own.config.RsaProperties;
+import com.own.exception.BadRequestException;
+import com.own.modules.system.domain.User;
+import com.own.modules.system.domain.vo.UserPassVo;
+import com.own.modules.system.service.*;
+import com.own.modules.system.service.dto.RoleSmallDto;
+import com.own.modules.system.service.dto.UserDto;
+import com.own.modules.system.service.dto.UserQueryCriteria;
+import com.own.utils.PageUtil;
+import com.own.utils.RsaUtils;
+import com.own.utils.SecurityUtils;
+import com.own.utils.enums.CodeEnum;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author Zheng Jie
@@ -31,16 +61,20 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final PasswordEncoder passwordEncoder;
-   /* private final UserService userService;
+    private final UserService userService;
+
+
+
+
     private final DataService dataService;
     private final DeptService deptService;
     private final RoleService roleService;
-    private final VerifyService verificationCodeService;*/
+    private final VerifyService verificationCodeService;
 
-  /*  @Log("导出用户数据")
+    @Log("导出用户数据")
     @ApiOperation("导出用户数据")
     @GetMapping(value = "/download")
-    @PreAuthorize("@el.check('user:list')")
+    @PreAuthorize("@own.check('user:list')")
     public void download(HttpServletResponse response, UserQueryCriteria criteria) throws IOException {
         userService.download(userService.queryAll(criteria), response);
     }
@@ -48,8 +82,8 @@ public class UserController {
     @Log("查询用户")
     @ApiOperation("查询用户")
     @GetMapping
-    @PreAuthorize("@el.check('user:list')")
-    public ResponseEntity<Object> query(UserQueryCriteria criteria, Pageable pageable){
+    @PreAuthorize("@own.check('user:list')")
+    public ResponseEntity<Object> query(UserQueryCriteria criteria, Pageable pageable) {
         if (!ObjectUtils.isEmpty(criteria.getDeptId())) {
             criteria.getDeptIds().add(criteria.getDeptId());
             criteria.getDeptIds().addAll(deptService.getDeptChildren(criteria.getDeptId(),
@@ -62,7 +96,7 @@ public class UserController {
             // 取交集
             criteria.getDeptIds().retainAll(dataScopes);
             if(!CollectionUtil.isEmpty(criteria.getDeptIds())){
-                return new ResponseEntity<>(userService.queryAll(criteria,pageable),HttpStatus.OK);
+                return new ResponseEntity<>(userService.queryAll(criteria,pageable), HttpStatus.OK);
             }
         } else {
             // 否则取并集
@@ -72,10 +106,11 @@ public class UserController {
         return new ResponseEntity<>(PageUtil.toPage(null,0),HttpStatus.OK);
     }
 
+
     @Log("新增用户")
     @ApiOperation("新增用户")
     @PostMapping
-    @PreAuthorize("@el.check('user:add')")
+    @PreAuthorize("@own.check('user:add')")
     public ResponseEntity<Object> create(@Validated @RequestBody User resources){
         checkLevel(resources);
         // 默认密码 123456
@@ -87,7 +122,7 @@ public class UserController {
     @Log("修改用户")
     @ApiOperation("修改用户")
     @PutMapping
-    @PreAuthorize("@el.check('user:edit')")
+    @PreAuthorize("@own.check('user:edit')")
     public ResponseEntity<Object> update(@Validated(User.Update.class) @RequestBody User resources){
         checkLevel(resources);
         userService.update(resources);
@@ -108,7 +143,7 @@ public class UserController {
     @Log("删除用户")
     @ApiOperation("删除用户")
     @DeleteMapping
-    @PreAuthorize("@el.check('user:del')")
+    @PreAuthorize("@own.check('user:del')")
     public ResponseEntity<Object> delete(@RequestBody Set<Long> ids){
         for (Long id : ids) {
             Integer currentLevel =  Collections.min(roleService.findByUsersId(SecurityUtils.getCurrentUserId()).stream().map(RoleSmallDto::getLevel).collect(Collectors.toList()));
@@ -120,7 +155,6 @@ public class UserController {
         userService.delete(ids);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
     @ApiOperation("修改密码")
     @PostMapping(value = "/updatePass")
     public ResponseEntity<Object> updatePass(@RequestBody UserPassVo passVo) throws Exception {
@@ -157,15 +191,17 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    *//**
+    /**
      * 如果当前用户的角色级别低于创建用户的角色级别，则抛出权限不足的错误
      * @param resources /
-     *//*
+     */
     private void checkLevel(User resources) {
+        // 获取最低level
         Integer currentLevel =  Collections.min(roleService.findByUsersId(SecurityUtils.getCurrentUserId()).stream().map(RoleSmallDto::getLevel).collect(Collectors.toList()));
         Integer optLevel = roleService.findByRoles(resources.getRoles());
         if (currentLevel > optLevel) {
             throw new BadRequestException("角色权限不足");
         }
-    }*/
+    }
 }
+

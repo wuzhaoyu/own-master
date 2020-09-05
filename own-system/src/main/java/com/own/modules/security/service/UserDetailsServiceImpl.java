@@ -34,6 +34,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Description:   security 校验用户的实现类
+ *  实现security框架检验信息的获取数据部分
  * @Author:   wzy
  * @Date:      2020/7/28 16:45
  **/

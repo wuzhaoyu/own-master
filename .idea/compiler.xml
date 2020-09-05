@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="own-common" />
         <module name="own-generator" />
-        <module name="own-logging" />
-        <module name="own-system" />
         <module name="own-tools" />
+        <module name="own-system" />
+        <module name="own-logging" />
       </profile>
     </annotationProcessing>
   </component>

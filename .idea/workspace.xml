@@ -2,14 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbec1582-e58f-4003-b4c3-dcc976bbc15a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/own-system/src/test/java/com/own/RSACoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-common/src/main/java/com/own/annotation/Limit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-common/src/main/java/com/own/aspectj/LimitAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-common/src/main/java/com/own/aspectj/LimitType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-common/src/main/java/com/own/config/OwnPermissionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-common/src/main/java/com/own/utils/ThrowableUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/config/JobRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/config/QuartzConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/domain/QuartzJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/domain/QuartzLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/repository/QuartzJobRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/repository/QuartzLogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/rest/QuartzJobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/service/QuartzJobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/service/dto/JobQueryCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/service/impl/QuartzJobServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/task/TestTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/utils/ExecutionJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/utils/QuartzManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/quartz/utils/QuartzRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/domain/Dict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/domain/DictDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/repository/DictDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/repository/DictRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/repository/JobRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/DeptController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/DictController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/DictDetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/JobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/LimitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/MonitorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/DictDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/DictService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/JobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/MonitorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/VerifyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/DictDetailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/DictDetailQueryCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/DictDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/DictQueryCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/DictSmallDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/JobQueryCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/impl/DictDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/impl/DictServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/impl/JobServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/impl/MonitorServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/impl/VerifyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/mapstruct/DeptSmallMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/mapstruct/DictDetailMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/mapstruct/DictMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/mapstruct/DictSmallMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/thread/AsyncTaskExecutePool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/thread/AsyncTaskProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/thread/TheadFactoryName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/thread/ThreadPoolExecutorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/utils/enums/CodeBiEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/utils/enums/CodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-system/src/test/java/com/own/mapstruct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-tools/src/main/java/com/own/domain/domain/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-tools/src/main/java/com/own/domain/reposiiorty/EmailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-tools/src/main/java/com/own/domain/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-tools/src/main/java/com/own/domain/service/impl/EmailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/own-tools/src/main/java/com/own/domain/vo/EmailVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own-common/src/main/java/com/own/utils/RsaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-common/src/main/java/com/own/utils/RsaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own-common/target/classes/com/own/utils/RsaUtils$RsaKeyPair.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-common/target/classes/com/own/utils/RsaUtils$RsaKeyPair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own-common/target/classes/com/own/utils/RsaUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-common/target/classes/com/own/utils/RsaUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/security/config/bean/LoginProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/security/config/bean/LoginProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/security/security/TokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/security/security/TokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/security/config/bean/LoginProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/security/config/bean/LoginProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/security/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/security/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/rest/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/UserQueryCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/src/main/java/com/own/modules/system/service/dto/UserQueryCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/security/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/security/service/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/system/rest/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/system/rest/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/system/rest/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/system/rest/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/system/service/dto/UserQueryCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/target/classes/com/own/modules/system/service/dto/UserQueryCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own-system/target/generated-sources/annotations/com/own/modules/system/service/mapstruct/DeptMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/own-system/target/generated-sources/annotations/com/own/modules/system/service/mapstruct/DeptMapperImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +99,10 @@
       <list>
         <option value="Aspect" />
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="AnnotationType" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -44,6 +110,11 @@
     <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JRebelWorkspace">
@@ -71,31 +142,31 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DongShi-Dgds" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.mvnsearch.intellij.plugin.zookeeper.ui.ZkProjectConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.own.modules.system.repository" />
-      <recent name="com.own.modules.system.service.dto" />
-      <recent name="com.own.modules.system.service.impl" />
-      <recent name="com.own.modules.system.service" />
-      <recent name="com.own.modules.system.rest" />
+      <recent name="com.own.domain.domain" />
+      <recent name="com.own.domain.reposiiorty" />
+      <recent name="com.own.domain.service.impl" />
+      <recent name="com.own.domain.service" />
+      <recent name="com.own.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\own-master" />
-      <recent name="G:\own-master\own-tools" />
-      <recent name="G:\own-master\own-logging" />
-      <recent name="G:\own-master\own-system" />
-      <recent name="G:\own-master\own-generator" />
+      <recent name="G:\own-master\own-system\src\main\java\com\own\modules\system" />
+      <recent name="G:\own-master\own-system\src\main\java\com\own\modules" />
+      <recent name="G:\own-master\own-common\src\main\java\com\own\aspectj" />
+      <recent name="G:\own-master\own-system\src\main\java\com\own\modules\system\service\mapstruct" />
+      <recent name="G:\own-master\own-system\src\main\java\com\own\modules\system\repository" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AppRun">
@@ -195,9 +266,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.ClassLoadTest" />
-      <item itemvalue="Spring Boot.AppRun" />
       <item itemvalue="Application.RSACoder" />
       <item itemvalue="Application.RsaUtils" />
+      <item itemvalue="Spring Boot.AppRun" />
     </list>
     <recent_temporary>
       <list>
@@ -205,6 +276,7 @@
         <item itemvalue="Application.RsaUtils" />
         <item itemvalue="Application.RSACoder" />
         <item itemvalue="Application.ClassLoadTest" />
+        <item itemvalue="Application.RsaUtils" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +311,14 @@
       <workItem from="1595748113001" duration="4691000" />
       <workItem from="1595914527615" duration="23413000" />
       <workItem from="1596072566386" duration="296000" />
-      <workItem from="1596161513208" duration="13243000" />
+      <workItem from="1596161513208" duration="13988000" />
+      <workItem from="1597135630737" duration="8146000" />
+      <workItem from="1597584908146" duration="7588000" />
+      <workItem from="1597713606774" duration="2067000" />
+      <workItem from="1597824006626" duration="92000" />
+      <workItem from="1597824965952" duration="8900000" />
+      <workItem from="1598273768709" duration="19562000" />
+      <workItem from="1598489368478" duration="22121000" />
     </task>
     <task id="LOCAL-00001" summary="git忽略文件">
       <created>1596415998446</created>
@@ -248,7 +327,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596415998446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="git忽略文件">
+      <created>1596416164284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596416164284</updated>
+    </task>
+    <task id="LOCAL-00003" summary="测试文件">
+      <created>1596416239953</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596416239953</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,9 +349,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git忽略文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="git忽略文件" />
+    <MESSAGE value="测试文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试文件" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="538" y="110" key="#Custom_Plugin_Repositories" timestamp="1599101876600">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="538" y="110" key="#Custom_Plugin_Repositories/0.0.1920.1040@0.0.1920.1040" timestamp="1599101876600" />
     <state x="414" y="174" width="1207" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595930948123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -267,10 +365,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595645639156" />
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1595938147287">
+    <state x="699" y="353" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1599101845522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="699" y="353" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599101845522" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1597825871801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595938147287" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597825871801" />
     <state x="608" y="443" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595928245011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -283,111 +386,119 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="298" width="1033" height="598" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596178137343" />
-    <state x="545" y="73" key="CommitChangelistDialog2" timestamp="1596415996972">
+    <state x="545" y="73" key="CommitChangelistDialog2" timestamp="1596416238583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="545" y="73" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415996972" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1595932927569">
+    <state x="545" y="73" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596416238583" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1599014569312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595932927569" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1596415972243">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598352523155" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599014569312" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1599273041413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324646" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1596415972242">
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598405405890" />
+    <state width="1877" height="230" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598511265385" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041413" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1599273041413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972242" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324645" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1596415972242">
+    <state width="1877" height="207" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598405405889" />
+    <state width="1877" height="230" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598511265385" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041413" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1599273041412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972242" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324644" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1596415972242">
+    <state width="1877" height="207" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598405405889" />
+    <state width="1877" height="230" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598511265384" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041412" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1599273041413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972242" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324646" />
-    <state width="1877" height="266" key="GridCell.Tab.1.bottom" timestamp="1596415972243">
+    <state width="1877" height="207" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598405405889" />
+    <state width="1877" height="230" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598511265385" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041413" />
+    <state width="1877" height="279" key="GridCell.Tab.1.bottom" timestamp="1599273041414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324647" />
-    <state width="1877" height="266" key="GridCell.Tab.1.center" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176141" />
+    <state width="1877" height="279" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041414" />
+    <state width="1877" height="279" key="GridCell.Tab.1.center" timestamp="1599273041414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324646" />
-    <state width="1877" height="266" key="GridCell.Tab.1.left" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176136" />
+    <state width="1877" height="279" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041414" />
+    <state width="1877" height="279" key="GridCell.Tab.1.left" timestamp="1599273041414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324646" />
-    <state width="1877" height="266" key="GridCell.Tab.1.right" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176130" />
+    <state width="1877" height="279" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041414" />
+    <state width="1877" height="279" key="GridCell.Tab.1.right" timestamp="1599273041414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324646" />
-    <state width="1877" height="266" key="GridCell.Tab.2.bottom" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176139" />
+    <state width="1877" height="279" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041414" />
+    <state width="1877" height="279" key="GridCell.Tab.2.bottom" timestamp="1599273041415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324647" />
-    <state width="1877" height="266" key="GridCell.Tab.2.center" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176154" />
+    <state width="1877" height="279" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041415" />
+    <state width="1877" height="279" key="GridCell.Tab.2.center" timestamp="1599273041415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324647" />
-    <state width="1877" height="266" key="GridCell.Tab.2.left" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176147" />
+    <state width="1877" height="279" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041415" />
+    <state width="1877" height="279" key="GridCell.Tab.2.left" timestamp="1599273041415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324647" />
-    <state width="1877" height="266" key="GridCell.Tab.2.right" timestamp="1596415972243">
+    <state width="1877" height="210" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176145" />
+    <state width="1877" height="279" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041415" />
+    <state width="1877" height="279" key="GridCell.Tab.2.right" timestamp="1599273041415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596415972243" />
-    <state width="1877" height="266" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596415324647" />
-    <state x="440" y="93" key="SettingsEditor" timestamp="1595749527467">
+    <state width="1877" height="210" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597299176151" />
+    <state width="1877" height="279" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599273041415" />
+    <state x="440" y="93" key="SettingsEditor" timestamp="1599101879814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="93" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595749527467" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596416000860">
+    <state x="440" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599101879814" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596416245568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596416000860" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596416245568" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1596178095280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596178095280" />
-    <state x="550" y="285" width="659" height="532" key="find.popup" timestamp="1596166757745">
+    <state x="2809" y="271" width="778" height="532" key="find.popup" timestamp="1598499990979">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="889" y="271" width="778" height="532" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598439661664" />
+    <state x="2809" y="271" width="778" height="532" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1598499990979" />
+    <state x="550" y="285" width="806" height="604" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597826029632" />
+    <state x="736" y="309" key="git4idea.merge.GitMergeDialog" timestamp="1596416396490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="550" y="285" width="659" height="532" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596166757745" />
-    <state x="334" y="41" key="new project wizard" timestamp="1595503326565">
+    <state x="736" y="309" key="git4idea.merge.GitMergeDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596416396490" />
+    <state x="334" y="41" key="new project wizard" timestamp="1597284963002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="41" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595503326565" />
+    <state x="334" y="41" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597284963002" />
     <state x="552" y="178" key="scopes" timestamp="1595923069170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="scopes/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1595923069170" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596175700458">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598439750946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1596175700458" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1598439750946" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597842648775" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/context/SecurityContextPersistenceFilter.class</url>
-          <line>34</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class</url>
           <line>61</line>
@@ -397,26 +508,6 @@
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.1.RELEASE/spring-security-web-5.1.1.RELEASE.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.class</url>
           <line>28</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class</url>
-          <line>56</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.class</url>
-          <line>54</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class</url>
-          <line>49</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class</url>
-          <line>32</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

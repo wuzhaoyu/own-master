@@ -17,33 +17,27 @@ package com.own.modules.system.service.dto;
 
 import com.own.annotation.Query;
 import lombok.Data;
-import java.io.Serializable;
+import lombok.NoArgsConstructor;
+
 import java.sql.Timestamp;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
+
 
 /**
- * @Author wzy
- * @Description
- * @Date:   2020/8/16 22:18
+ * @Description:
+ * @Author:   wzy
+ * @Date:      2020/8/18 9:42
  **/
 @Data
-public class UserQueryCriteria implements Serializable {
+@NoArgsConstructor
+public class JobQueryCriteria {
 
-    @Query
-    private Long id;
-
-    @Query(propName = "id", type = Query.Type.IN, joinName = "dept")
-    private Set<Long> deptIds = new HashSet<>();
-
-    @Query(blurry = "email,username,nickName")
-    private String blurry;
+    @Query(type = Query.Type.INNER_LIKE)
+    private String name;
 
     @Query
     private Boolean enabled;
-
-    private Long deptId;
 
     @Query(type = Query.Type.BETWEEN)
     private List<Timestamp> createTime;
